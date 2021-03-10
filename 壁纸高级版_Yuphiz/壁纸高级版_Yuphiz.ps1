@@ -1,7 +1,7 @@
 <#
 .声明
 脚本：壁纸高级版_Yuphiz 
-版本：v0.1
+版本：v0.1.1
 作者：Yuphiz
 本脚本可以帮助 Windows10 自动切换深浅色主题的壁纸
 凡用此脚本从事法律不允许的事情的，均与本作者无关
@@ -478,8 +478,8 @@ $WallpaperFit = $Wallpaper
 for ($i=0;$i -lt 3; $i++){
       $WallpaperFolderName = Split-Path $WallpaperFit -leaf
       $WallpaperFit = Split-Path $WallpaperFit
-      if ($WallpaperStyle[$WallpaperFolderName] -ne $null){
-            $defaultWallpaperStyle = $WallpaperStyle[$WallpaperFolderName]
+      if ($WallpaperStyle.$WallpaperFolderName -ne $null){
+            $defaultWallpaperStyle = $WallpaperStyle.$WallpaperFolderName
             break
       }
 }
